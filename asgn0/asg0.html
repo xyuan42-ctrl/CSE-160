@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>asg0</title>
+</head>
+
+<!--main -->
+<body onload="main()">
+
+  <p>
+    Name: Ximao Yuan<br>
+    Email: xyuan42@ucsc.edu
+  </p>
+
+  <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+  </canvas>
+
+  <script src="lib/cuon-matrix-cse160.js"></script>
+  <script src="asg0.js"></script>
+
+  <!-- interface for the user to specify and draw the v1 vector -->
+  <p>
+    v1:
+    x <input id="x1" type="number" step="any" value="2.25">
+    y <input id="y1" type="number" step="any" value="2.25">
+  </p>
+
+  <p>
+    v2:
+    x <input id="x2" type="number" step="any" value="1.5">
+    y <input id="y2" type="number" step="any" value="1.0">
+  </p>
+
+  <!--draw botton -->
+  <input type="button" value="Draw" onclick="handleDrawEvent()">
+
+
+  <!--an interface for the user to perform and visualize the 
+  results of add, sub, div and mul operations -->
+  <p>
+    Operation:
+    <select id="operation">
+      <option value="add">Add</option>
+      <option value="sub">Sub</option>
+      <option value="mul">Mul</option>
+      <option value="div">Div</option>
+      <option value="magnitude">Magnitude</option>
+      <option value="normalize">Normalize</option>
+      <option value="angle">Angle between</option>
+      <option value="area">Area</option>
+    </select>
+
+    Scalar:
+    <input id="scalar" type="number" step="any" value="2">
+  </p>
+
+  <input type="button" value="Draw" onclick="handleDrawOperationEvent()">
+
+
+<!--image -->
+  <br><br>
+  <canvas id="webgl" width="400" height="400"></canvas>
+
+</body>
+</html>
