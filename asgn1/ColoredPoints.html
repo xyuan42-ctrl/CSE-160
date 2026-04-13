@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 1 - Colored Points</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      canvas {
+        border: 1px solid black;
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .controls {
+        margin-bottom: 10px;
+      }
+
+      button {
+        margin-right: 6px;
+      }
+    </style>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <div class="controls">
+      <button id="clearButton">Clear Canvas</button>
+    </div>
+
+    <div class="controls">
+      <strong>Drawing Mode:</strong><br>
+      <button id="pointButton">Points</button>
+      <button id="triButton">Triangles</button>
+      <button id="circleButton">Circles</button>
+    </div>
+
+    <div class="controls">
+      <strong>Shape Color:</strong><br>
+      Red
+      <input type="range" id="redSlide" min="0" max="100" value="100">
+
+      Green
+      <input type="range" id="greenSlide" min="0" max="100" value="100">
+
+      Blue
+      <input type="range" id="blueSlide" min="0" max="100" value="100">
+    </div>
+
+    <div class="controls">
+      <strong>Shape Size:</strong>
+      <input type="range" id="sizeSlide" min="5" max="40" value="10">
+
+      <strong>(Circles) Segment Count:</strong>
+      <input type="range" id="segmentSlide" min="3" max="30" value="10">
+    </div>
+
+    <div class="controls">
+      <label>
+        <input type="checkbox" id="rainbowToggle">
+        Rainbow Mode
+      </label>
+    </div>
+
+    <div class="controls">
+      <button id="drawPictureButton">Draw Windmill</button>
+      <span>My picture is a windmill with initials X and Y in the design.</span>
+    </div>
+
+    <div class="controls">
+      <p><strong>My Original Sketch:</strong></p>
+      <img src="Windmill.jpg" width="200">
+    </div>
+
+    <p>Picture: A triangle-built windmill that integrates my initials X and Y into the design.</p>
+
+    <p>Awesomeness: Rainbow Mode automatically cycles colors while drawing.</p>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="ColoredPoints.js"></script>
+  </body>
+</html>
