@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Assignment 3 - Virtual World</title>
+</head>
+
+<body onload="main()">
+
+  <h3>Ximao Yuan | Assignment 3</h3>
+  <h3>xyuan42@ucsc.edu</h3>
+
+  <canvas id="webgl" width="500" height="500">
+    Please use a browser that supports canvas.
+  </canvas>
+
+  <p>
+    Controls:
+    W = forward,
+    S = backward,
+    A = left,
+    D = right,
+    Q = turn left,
+    E = turn right,
+    F = delete block,
+    G = add block.
+  </p>
+
+  <p>Mouse drag = rotate camera</p>
+
+  <p id="fps">FPS: --</p>
+
+  <script src="lib/cuon-matrix.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="Triangle.js"></script>
+  <script src="Cube.js"></script>
+  <script src="Cylinder.js"></script>
+  <script src="asgn3.js"></script>
+</body>
+</html>
